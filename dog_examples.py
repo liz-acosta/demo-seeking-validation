@@ -10,16 +10,16 @@ class Wolfhound:
     def bark(self):
         print("The wolfhound goes arf arf!")
 
-# pets = [Pug(), LabradorRetriever(), Wolfhound()]
+def make_dogs_bark(pets):
+    for pet in pets:
+        pet.bark()
 
-# for pet in pets:
-#     pet.bark()
+# pets = [Pug(), LabradorRetriever(), Wolfhound()]
+# make_dogs_bark(pets)
 
 class Sphynx:
     def meow(self):
         print("The sphynx goes meow meow!")
 
 pets = [Pug(), LabradorRetriever(), Sphynx()]
-
-for pet in pets:
-    pet.bark()
+make_dogs_bark(pets)
