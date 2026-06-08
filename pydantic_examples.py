@@ -1,7 +1,7 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class Pug(BaseModel):
-    name: str
+    name: str = Field(..., min_length=1, description="The pug's name")
     age: int
     color: str = "fawn"
     
