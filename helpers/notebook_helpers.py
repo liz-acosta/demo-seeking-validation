@@ -6,6 +6,8 @@ from pathlib import Path
 
 @register_cell_magic
 def mypy(line, cell):
+    """A cell magic function that runs `mypy` on a specific cell
+    and formats the output for readability and demonstration emphasis"""
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         source = tmp / "demo.py"
