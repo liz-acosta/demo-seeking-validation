@@ -1,7 +1,7 @@
 import requests
 import unittest
 from unittest.mock import patch, Mock
-import get_dog_facts as dog_facts
+import get_dog_facts
 
 
 class GetDogFacts(unittest.TestCase):
@@ -33,7 +33,7 @@ class GetDogFacts(unittest.TestCase):
         mock_requests.get.return_value = mock_response
 
         expected_result = ["a6ea38ed-f692-478e-af29-378d0e2cc270"]
-        test_result = dog_facts.get_breed_id("pug")
+        test_result = get_dog_facts.get_breed_id("pug")
 
         self.assertEqual(expected_result, test_result)
 
@@ -66,9 +66,9 @@ class GetDogFacts(unittest.TestCase):
 
         mock_requests.get.return_value.json.return_value = test_data
 
-        with patch.object(dog_facts, "get_breed_id", mock_dog_breed_id):
+        with patch.object(get_dog_facts, "get_breed_id", mock_dog_breed_id):
 
-            test_result = dog_facts.get_dog_breed_info("pug")
+            test_result = get_dog_facts.get_dog_breed_info("pug")
 
             self.assertEqual(test_result["name"], "Pug")
             mock_dog_breed_id.assert_called_once_with("pug")
