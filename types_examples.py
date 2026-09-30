@@ -16,8 +16,11 @@ class Wolfhound:
         print("The wolfhound goes arf arf!")
 
 class Sphynx:
+    def __init__(self, name: str) -> None:
+        self.name: str = name
+    
     def meow(self) -> None:
-        print("The sphynx goes meow meow!")
+        print(f"The sphynx {self.name} goes meow meow!")
 
 def make_dogs_bark(pets: List[Pug | LabradorRetriever | Wolfhound ]) -> None:
     for pet in pets:
