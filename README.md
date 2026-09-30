@@ -80,4 +80,4 @@ mypy types_examples.py
 - [Wikipedia Entry About Pugs](https://en.wikipedia.org/wiki/Pug): Learn all about Pugs on Wikipedia
 - [Seeking Validation: Data Validation in Python with Pydantic and Vonage Verify](https://vonage.dev/4h5kvtt): Learn how Pydantic simplifies Python data validation, with a real-world demo using the Vonage Verify API
 
-![A gif of a cute Pug against a pink backdrop making it rain with dollar bills.](giphy-457171081.gif)
+![A gif of a cute Pug against a pink backdrop making it rain with dollar bills.](static/giphy-457171081.gif)
